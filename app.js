@@ -40,6 +40,10 @@ const condition = isNaN(age);
 
 if (isNaN(age)) {
   alert("Please write a number...");
+} else if (age < 18) {
+  alert("You are toooooo young...T.T");
+} else if (age >= 18 && age <= 50) {
+  alert("You can do it!");
 } else {
   alert("Thank you for writing your age...");
 }
