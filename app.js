@@ -33,6 +33,13 @@ const divResult = calcultor.div(minusResult, 7);
 const multiResult = calcultor.multi(divResult, 2);
 const powerResult = calcultor.power(multiResult, 8);
 
-const age = prompt("How old are you?");
+const age = parseInt(prompt("How old are you?"));
 
-console.log(typeof age, typeof parseInt(age));
+// age가 숫자면 false, 문자면 true
+const condition = isNaN(age);
+
+if (isNaN(age)) {
+  alert("Please write a number...");
+} else {
+  alert("Thank you for writing your age...");
+}
