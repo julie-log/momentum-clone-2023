@@ -32,3 +32,7 @@ const minusResult = calcultor.minus(plusResult, 2);
 const divResult = calcultor.div(minusResult, 7);
 const multiResult = calcultor.multi(divResult, 2);
 const powerResult = calcultor.power(multiResult, 8);
+
+const age = prompt("How old are you?");
+
+console.log(typeof age, typeof parseInt(age));
