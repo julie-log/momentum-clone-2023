@@ -10,25 +10,25 @@ function helloName() {
 }
 
 const calcultor = {
-  add: function (a, b) {
-    console.log(a + b);
+  plus: function (a, b) {
+    return a + b;
   },
   minus: function (a, b) {
-    console.log(a - b);
+    return a - b;
   },
   div: function (a, b) {
-    console.log(a / b);
+    return a / b;
   },
   multi: function (a, b) {
-    console.log(a * b);
+    return a * b;
   },
   power: function (a, b) {
-    console.log(a ** b);
+    return a ** b;
   },
 };
 
-calcultor.add(5, 1);
-calcultor.minus(3, 2);
-calcultor.div(4, 7);
-calcultor.multi(5, 2);
-calcultor.power(2, 8);
+const plusResult = calcultor.plus(5, 1);
+const minusResult = calcultor.minus(plusResult, 2);
+const divResult = calcultor.div(minusResult, 7);
+const multiResult = calcultor.multi(divResult, 2);
+const powerResult = calcultor.power(multiResult, 8);
