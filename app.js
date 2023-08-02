@@ -1,7 +1,4 @@
-const yourName = "julie";
-function helloName(name) {
-  alert("Hello!!! " + name);
-  console.log("Hello!!! " + name);
+function helloName() {
+  const yourName = document.getElementById("username").value;
+  alert("Hello!!! " + yourName + "!!! Nice to meet you!");
 }
-
-helloName(yourName);
