@@ -2,9 +2,15 @@ const toDoForm = document.querySelector("#todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.querySelector("#todo-list");
 
+const toDos = [];
+
 function deleteToDo(e) {
   const li = e.target.parentElement;
   li.remove();
+}
+
+function saveToDos(toDos) {
+  localStorage.setItem("toDoList", JSON.stringify(toDos));
 }
 function paintToDo(newToDo) {
   //   toDoList.innerHTML = `<li><span>${newToDo}</span></li>`;
@@ -20,10 +26,11 @@ function paintToDo(newToDo) {
 }
 function handleToDoSubmit(e) {
   e.preventDefault();
-  localStorage.setItem("toDoList", toDoInput.value);
   const newToDo = toDoInput.value;
   toDoInput.value = "";
+  toDos.push(newToDo);
   paintToDo(newToDo);
+  saveToDos(toDos);
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
