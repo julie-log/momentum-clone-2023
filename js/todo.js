@@ -2,21 +2,19 @@ const toDoForm = document.querySelector("#todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.querySelector("#todo-list");
 
-const toDos = [];
+let toDos = [];
 const TODOS_KEY = "toDoList";
 
 function deleteToDo(e) {
   const li = e.target.parentElement;
   li.remove();
-  //   toDos.pop(li);
-  //   console.log(toDos);
+  toDos.pop(li);
 }
 
 function saveToDos(toDos) {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 function paintToDo(newToDo) {
-  //   toDoList.innerHTML = `<li><span>${newToDo}</span></li>`;
   const li = document.createElement("li");
   const span = document.createElement("span");
   span.innerText = newToDo;
@@ -46,5 +44,6 @@ function sayHello(item) {
 
 if (savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
+  toDos = parsedToDos;
   parsedToDos.forEach(sayHello);
 }
