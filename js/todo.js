@@ -7,11 +7,12 @@ const TODOS_KEY = "toDoList";
 
 function deleteToDo(e) {
   const li = e.target.parentElement;
-  const id = li.id;
   li.remove();
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+  saveToDos();
 }
 
-function saveToDos(toDos) {
+function saveToDos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 function paintToDo(newTodoObj) {
