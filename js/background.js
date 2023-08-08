@@ -1,11 +1,16 @@
 const images = [
-  "0.jpeg",
-  "1.jpeg",
-  "2.jpeg",
-  "3.jpeg",
-  "4.jpeg",
-  "5.jpeg",
-  "6.jpeg",
+  "00.gif",
+  "01.gif",
+  "02.gif",
+  "03.gif",
+  "04.gif",
+  "05.gif",
+  "06.gif",
+  "07.gif",
+  "08.gif",
+  "09.gif",
+  "10.gif",
+  "11.gif",
 ];
 
 const number = Math.floor(Math.random() * images.length);
