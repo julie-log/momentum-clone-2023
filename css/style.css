@@ -1,31 +1,108 @@
+@import "variables.css";
+@import "components/search.css";
+@import "components/clock.css";
+@import "components/greeting.css";
+@import "components/photo.css";
+@import "components/mv.css";
+@import "components/todo.css";
+@import "components/weather.css";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap");
 body {
   margin: 0;
   padding: 0;
-  background-color: bisque;
-}
-.content {
-  background-color: black;
-  padding: 20px;
-  color: aliceblue;
-  margin: 20px;
-  width: 400px;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Noto Sans KR", sans-serif;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-.content > * {
-  display: inline-block;
+
+input {
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  letter-spacing: -0.25pt;
+  -webkit-padding-before: 3px;
+  padding-block-start: 3px;
+  color: aliceblue;
+  border-radius: 8px;
+  padding-left: 10px;
+  outline: none;
 }
+
+input::placeholder {
+  color: aliceblue;
+}
+section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section > div {
+  margin-right: 1vw;
+  width: 25vw;
+}
+
+section > div:last-child {
+  margin-right: 0;
+}
+
+.left-top {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.left-bottom {
+  position: relative;
+}
+.right {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.right-top {
+  position: relative;
+  margin: 0 0 20px 0;
+}
+
+.right-bottom {
+  position: relative;
+}
+
 .hidden {
   display: none;
 }
-img {
+.mobile {
+  display: none;
   position: absolute;
-  width: 50vw;
-  height: 100%;
-  top: 0px;
-  left: 50%;
-  bottom: 0px;
-  z-index: -1;
-  opacity: 65%;
-  transform: translateX(-50%);
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: var(--rose);
+  width: 100vw;
+  height: 100vh;
+}
+
+@media screen and (max-width: 1080px) {
+  /* section {
+    flex-direction: column;
+  }
+  section > div {
+    margin-right: 0;
+    width: 70vw;
+  }
+  .left-bottom {
+    margin-bottom: 20px;
+  } */
+  .mobile {
+    display: flex;
+  }
 }

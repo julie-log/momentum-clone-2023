@@ -10,11 +10,23 @@ function onLoginSubmit(e) {
   const username = loginInput.value;
   loginForm.classList.add(HIDDEN_CLASSNAME);
   localStorage.setItem(USERNAME_KEY, username);
+  loginInput.value = "";
   printGreetings(username);
 }
 
+function logout(e) {
+  const username = e.target.parentElement;
+  loginForm.classList.remove(HIDDEN_CLASSNAME);
+  loginForm.value = "";
+  localStorage.removeItem(USERNAME_KEY, username);
+  greeting.classList.add(HIDDEN_CLASSNAME);
+}
 function printGreetings(username) {
-  greeting.innerText = `Hello ${username}!!!`;
+  const button = document.createElement("button");
+  button.innerText = "Log Out";
+  button.addEventListener("click", logout);
+  greeting.innerHTML = `${username} 님, 안녕하세요 😀!`;
+  greeting.appendChild(button);
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 

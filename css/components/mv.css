@@ -1,0 +1,45 @@
+.mute-box {
+  width: 100%;
+  height: 280px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.1);
+  border: 20px solid;
+  border-radius: 8px;
+  border-bottom: 43px solid;
+  border-top: 43px solid;
+  box-sizing: border-box;
+}
+iframe {
+  border-radius: 8px;
+}
+.left-top button {
+  border: 0;
+  padding: 5px 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-top button.url-button {
+  left: 20px;
+}
+.left-top button:last-child {
+  right: 20px;
+}
+.left-top span {
+  font-size: 14px;
+}
+
+#songs {
+  position: absolute;
+  top: 10px;
+  color: aliceblue;
+  left: 20px;
+  font-weight: 600;
+}

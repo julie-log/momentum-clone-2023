@@ -7,35 +7,98 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="content">
-      <h2 id="clock">00:00:00</h2>
-      <form class="hidden" id="login-form">
-        <input
-          type="text"
-          placeholder="What is your name?"
-          required
-          maxlength="16"
-        />
-        <button type="submit">Log In</button>
-      </form>
-      <h1 class="hidden" id="greeting"></h1>
-      <form id="todo-form">
-        <input type="text" placeholder="Write a To do List ..." />
-      </form>
-      <ul id="todo-list"></ul>
-      <div id="quotes">
-        <span></span>
-        <span></span>
+    <header class="title">
+      <h1>My Widget 💌</h1>
+    </header>
+    <section>
+      <div class="left">
+        <div class="left-top">
+          <div class="mute-box"></div>
+          <iframe
+            width="100%"
+            height="280"
+            src=""
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <div id="songs">
+            <span></span>
+          </div>
+          <button type="button" class="url-button">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </button>
+          <button type="button" class="random-button">
+            <i class="fas fa-random"></i>
+          </button>
+        </div>
+        <div class="left-bottom">
+          <div class="photo">
+            <img src="img/00.gif" />
+            <button id="bg-change"><i class="fas fa-image"></i></button>
+          </div>
+        </div>
       </div>
-      <div id="weather">
-        <span></span>
-        <span></span>
+      <div class="right">
+        <div class="login">
+          <form class="hidden" id="login-form">
+            <input
+              type="text"
+              placeholder="이름을 입력해 주세요..."
+              required
+              maxlength="10"
+            />
+            <button type="submit">Login</button>
+          </form>
+          <h3 class="hidden" id="greeting"></h3>
+        </div>
+        <div class="search">
+          <form id="search-form">
+            <input
+              type="text"
+              placeholder="검색어를 입력해 주세요..."
+              required
+              maxlength="80"
+            />
+            <button type="submit">
+              <i class="fas fa-search fa-lg"></i>
+            </button>
+          </form>
+        </div>
+        <div class="clock">
+          <h1 id="clock">00:00<span>00</span></h1>
+          <h2 id="date">0000.00.00 Monday</h2>
+        </div>
+        <div class="weather" id="weather">
+          <span></span>
+        </div>
+        <div class="todo">
+          <form id="todo-form">
+            <input
+              type="text"
+              placeholder="오늘 할일을 작성하세요 ..."
+              required
+              maxlength="30"
+            />
+          </form>
+          <ul id="todo-list"></ul>
+        </div>
       </div>
+    </section>
+    <div class="mobile">
+      <p>Your screen is too small...</p>
     </div>
+
+    <!-- fontaweawesome https://fontawesome.com/v5/search?m=free -->
+    <script src="https://kit.fontawesome.com/6478f529f2.js"></script>
+    <script src="js/bg.js"></script>
     <script src="js/greeting.js"></script>
+    <script src="js/search.js"></script>
     <script src="js/clock.js"></script>
-    <script src="js/quotes.js"></script>
-    <script src="js/background.js"></script>
+    <script src="js/date.js"></script>
+    <script src="js/mv.js"></script>
+    <script src="js/photo.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
   </body>
