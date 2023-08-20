@@ -12,7 +12,8 @@
     </header>
     <section>
       <div class="left">
-        <div class="left-top">
+        <h2 class="sub-tit">Now Playing...</h2>
+        <div class="mv">
           <div class="mute-box"></div>
           <iframe
             width="100%"
@@ -33,14 +34,14 @@
             <i class="fas fa-random"></i>
           </button>
         </div>
-        <div class="left-bottom">
-          <div class="photo">
-            <img src="img/00.gif" />
-            <button id="bg-change"><i class="fas fa-image"></i></button>
-          </div>
+        <h2 class="sub-tit">My Gallery</h2>
+        <div class="photo">
+          <img src="img/00.gif" />
+          <button id="bg-change"><i class="fas fa-image"></i></button>
         </div>
       </div>
       <div class="right">
+        <h2 class="sub-tit">Login</h2>
         <div class="login">
           <form class="hidden" id="login-form">
             <input
@@ -53,6 +54,7 @@
           </form>
           <h3 class="hidden" id="greeting"></h3>
         </div>
+        <h2 class="sub-tit">Search</h2>
         <div class="search">
           <form id="search-form">
             <input
@@ -73,6 +75,7 @@
         <div class="weather" id="weather">
           <span></span>
         </div>
+        <h2 class="sub-tit">To do List</h2>
         <div class="todo">
           <form id="todo-form">
             <input
@@ -86,9 +89,7 @@
         </div>
       </div>
     </section>
-    <div class="mobile">
-      <p>Your screen is too small...ㅠㅠ</p>
-    </div>
+    <div class="opening"><img src="img/logo.png" /></div>
 
     <!-- fontaweawesome https://fontawesome.com/v5/search?m=free -->
     <script src="https://kit.fontawesome.com/6478f529f2.js"></script>

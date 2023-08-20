@@ -6,13 +6,13 @@
 @import "components/mv.css";
 @import "components/todo.css";
 @import "components/weather.css";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600;700&display=swap");
 body {
   margin: 0;
   padding: 0;
   height: 100vh;
   width: 100vw;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Comfortaa", "Noto Sans KR", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,13 +32,14 @@ input {
   border-radius: 8px;
   padding-left: 10px;
   outline: none;
+  box-shadow: var(--box-shadow);
 }
 
 input::placeholder {
   color: aliceblue;
 }
 header {
-  margin: 30px 0;
+  margin: 10px 0;
 }
 section {
   width: 100vw;
@@ -48,7 +49,7 @@ section {
 }
 
 section > div {
-  margin-right: 1vw;
+  margin-right: 2vw;
   width: 25vw;
 }
 
@@ -56,14 +57,12 @@ section > div:last-child {
   margin-right: 0;
 }
 
-.left-top {
-  position: relative;
-  margin-bottom: 20px;
+.sub-tit {
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
-.left-bottom {
-  position: relative;
-}
 .right {
   display: flex;
   justify-content: space-around;
@@ -81,30 +80,47 @@ section > div:last-child {
 .hidden {
   display: none;
 }
-.mobile {
-  display: none;
-  position: absolute;
-  top: 0;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  background-color: var(--rose);
+.opening {
   width: 100vw;
   height: 100vh;
+  background: var(--bg-gradient);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  animation: hideSplashScreen 0.4s 0.8s ease-in-out forwards;
+}
+
+.opening img {
+  width: 100px;
+}
+
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 @media screen and (max-width: 1080px) {
-  /* section {
+  section {
     flex-direction: column;
   }
   section > div {
     margin-right: 0;
-    width: 70vw;
-  }
-  .left-bottom {
+    width: 90vw;
     margin-bottom: 20px;
-  } */
-  .mobile {
-    display: flex;
   }
+  .right {
+    order: -1;
+  }
+
+  /* .mobile {
+    display: flex;
+  } */
 }

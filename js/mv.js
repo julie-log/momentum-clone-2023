@@ -40,14 +40,14 @@ const songs = [
     artist: "My My",
   },
 ];
-const iframe = document.querySelector(".left-top iframe");
+const iframe = document.querySelector(".mv iframe");
 const artist = document.querySelector("#songs span");
-const changeBtn = document.querySelector(".left-top .random-button");
-const urlBtn = document.querySelector(".left-top .url-button");
+const changeBtn = document.querySelector(".mv .random-button");
+const urlBtn = document.querySelector(".mv .url-button");
 let url;
 function randomSong() {
   const number = Math.floor(Math.random() * songs.length);
-  artist.innerText = `Now playing - SEVENTEEN 🎵 ${songs[number].artist} 🎶`;
+  artist.innerText = `SEVENTEEN 🎵 ${songs[number].artist} 🎶`;
   iframe.src = `https://www.youtube.com/embed/${songs[number].song}?mute=1&autoplay=1`;
   url = `https://www.youtube.com/embed/${songs[number].song}?autoplay=1`;
 }

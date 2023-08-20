@@ -32,6 +32,9 @@ const images = [
   "28.gif",
   "29.gif",
   "30.gif",
+  "31.gif",
+  "32.gif",
+  "33.gif",
 ];
 
 function photoChange() {

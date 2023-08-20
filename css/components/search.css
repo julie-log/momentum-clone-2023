@@ -9,8 +9,8 @@
 
 .search button {
   position: absolute;
-  right: 1vw;
-  top: 1vw;
+  right: 15px;
+  top: 15px;
   background: transparent;
   border: 0;
   color: #fff;
