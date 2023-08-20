@@ -1,5 +1,5 @@
 .clock {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 20px;
   color: aliceblue;
   display: flex;
@@ -10,6 +10,11 @@
 }
 .clock > * {
   display: inline-block;
+}
+.clock h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
 }
 #clock {
   font-size: 50px;
